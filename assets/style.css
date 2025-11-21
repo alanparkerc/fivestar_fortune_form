@@ -990,7 +990,7 @@ h1, .h1 {
 /* Wizard layout */
 
 .shell {
-  height: calc(100vh - 4px - var(--dock-h));
+  /* height: calc(100vh - 4px - var(--dock-h)); */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1054,7 +1054,7 @@ h1, .h1 {
 /* Bottom Bar */
 
 .dock {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   right: 0;
   bottom: 0;
@@ -1064,13 +1064,14 @@ h1, .h1 {
 }
 
 .dock-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 866px;
   margin: 0 auto;
   padding: 12px var(--space-m);
-  display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--space-m);
-  align-items: end;
 }
 
 @media (max-width: 640px) {

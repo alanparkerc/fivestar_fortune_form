@@ -90,7 +90,8 @@ function buildControlsForStep(s){
       const item = document.createElement('button');
       item.type = 'button';
       item.className = 'option';
-      item.innerHTML = `<span class="mark">✓</span><span class="label">${opt}</span>`;
+      // item.innerHTML = `<span class="mark">✓</span><span class="label">${opt}</span>`;
+      item.innerHTML = `<span class="label">${opt}</span>`;
       if(data[s.id]===opt) item.classList.add('active');
       item.addEventListener('mousedown', ()=> item.classList.add('tap'));
       item.addEventListener('mouseup', ()=> item.classList.remove('tap'));
@@ -98,7 +99,7 @@ function buildControlsForStep(s){
       item.addEventListener('click', ()=>{
         el.querySelectorAll('.option').forEach(n=>n.classList.remove('active'));
         item.classList.add('active');
-        advance(opt);
+        // advance(opt);
       });
       el.appendChild(item);
     });
@@ -239,8 +240,11 @@ function advance(value){
   }
   data[s.id] = value;
   step++;
-  if(step<STEPS.length){ render(); }
-  else { submit(); }
+  if (step < STEPS.length) {
+    render();
+  } else {
+    submit();
+  }
 }
 
 
