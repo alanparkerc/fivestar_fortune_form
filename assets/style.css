@@ -619,6 +619,7 @@ h1, .h1 {
 .option {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: var(--space-m);
   width: 100%;
   padding: 1.25rem;
@@ -1210,6 +1211,7 @@ summary::marker {
   }
   
   .slide-in-up {
+    text-align: center;
     animation: slideInUp 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
   
