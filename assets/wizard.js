@@ -1,8 +1,28 @@
 
 // v7m — Clean (no summary), progress bar, animations, option icons, phone mask + email validation
 const STEPS = [
-  { id:'amount',  type:'pills',   title:'How much tax debt do you owe?', sub:'Choose the closest range.', options:['< $10,000','$10,000–$25,000','$25,000–$50,000','$50,000+'], required:true },
-  { id:'taxtype', type:'pills',   title:'Do you have any unfiled tax years?', sub:'Select one.', options:['No, I\'m current','1 year','2–3 years','4–5 years','5+ years'], required:true },
+    { 
+    id: 'amount',
+    type: 'select', // 👈 change this
+    title: 'How much tax debt do you owe?',
+    sub: 'Choose the closest range.',
+    options: [
+      '$0 - $10,000',
+      '$10,001 - $20,000',
+      '$20,001 - $30,000',
+      '$30,001 - $40,000',
+      '$40,001 - $50,000',
+      '$50,000 - $75,000',
+      '$75,000 - $100,000',
+      '$100,001 - $199,999',
+      '$200,000 - $300,000',
+      '$300,000 - $400,000',
+      '$400,000 - $500,000',
+      '$500,000 and over'
+    ],
+    required: true
+  },
+  // { id:'taxtype', type:'pills',   title:'Do you have any unfiled tax years?', sub:'Select one.', options:['No, I\'m current','1 year','2–3 years','4–5 years','5+ years'], required:true },
   { id:'years',   type:'pills',   title:'Do you owe Federal or State taxes?', sub:'Select the best match.', options:['Federal','State', 'Both'], required:true },
  
   { id:'contact', type:'contact', title:'Who are we helping today? We will reach out to schedule a consultation.', sub:'Enter your contact details', required:true }
